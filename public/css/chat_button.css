@@ -1,0 +1,65 @@
+.cgbtn{
+    position: relative;
+    /* border: 5px solid blueviolet; */
+    width: 20%;
+    height: 20%;
+    transform: scale(0.8);
+    top: 55%;
+    left: 40%;
+
+}
+
+.toggle-body {
+    width: 4.7rem;
+    height: 2rem;
+    position: relative;
+    top: calc(70% - 3.9rem / 2);
+    left: calc(50% - 5rem / 2);
+    background: white;
+    border-radius: 2rem;
+    animation: angle-reverse 1.5s cubic-bezier(0.68, -0.15, 0.265, 1.35);
+}
+.toggle-body--on {
+    animation: angle 1.5s cubic-bezier(0.68, -0.15, 0.265, 1.35);
+    animation-direction: alternate;
+}
+.toggle-btn {
+    width: 1.4rem;
+    height: 1.4rem;
+    position: absolute;
+    top: calc(50% - 1.4rem / 2);
+    left: calc(27% - 1.4rem / 2);
+    background: white;
+    border-radius: 2rem;
+    background: #01BFBF;
+    cursor: pointer;
+    transform: translateX(0);
+    transition: 1.5s cubic-bezier(0.68, -0.15, 0.265, 1.35);
+}
+.toggle-btn--on {
+    transition: 1.5s cubic-bezier(0.68, -0.15, 0.265, 1.35);
+    transform: translateX(150%);
+    /* background: red; */
+}
+@keyframes angle {
+    0% {
+        transform: rotate(0deg);
+   }
+    50% {
+        transform: rotate(45deg);
+   }
+    100% {
+        transform: rotate(0deg);
+   }
+}
+@keyframes angle-reverse {
+    0% {
+        transform: rotate(0deg);
+   }
+    50% {
+        transform: rotate(-45deg);
+   }
+    100% {
+        transform: rotate(0deg);
+   }
+}

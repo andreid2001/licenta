@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Login</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="ISO-8859-1">
+  <link rel="stylesheet" href="/css/login.css">
+  <link rel="stylesheet" href="/css/login_anim.css">
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="login-page">
+    <div class="form">
+      
+
+      <form class="changepass-form">
+        <div class="attention"></div>
+        <input type="text" placeholder="username" class="Cpass_username" required />
+        <input type="text" placeholder="cnp" class="cnp_answer" required />
+        <input type="password" placeholder="new password" class="Cpass_newpass" required />
+        <input type="submit-norefresh" class="changepassbut" onclick="checkChpas()" value="change password" readonly/>
+        <p class="message">Have you remember? <a class="clogin" href="#">Sign In</a></p>
+      </form>
+
+      <form class="login-form">
+        <div class="attention"></div>
+        <input type="text" class="login_username" placeholder="username" required />
+        <input type="password" class="login_password" placeholder="password" required />
+        <input type="submit-norefresh" onclick="loginacc()" class="loginbut" value="login" readonly/>
+        <p class="message">Forgot password? <a class="change" href="#">Change your password</a></p>
+      </form>
+    </div>
+  </div>
+
+  <div class="presentation">
+    <img class="logo" src="/imgs/whitelogo.png">
+    <h1 class="speakfreely">Test Grading App</h1>
+    <p>Hello to *your university*'s online platform.</p>
+  </div>
+
+
+
+  <div class="stars"></div>
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <script src="/js/login.js"></script>
+</body>
+
+</html>

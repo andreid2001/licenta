@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chat</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="ISO-8859-1">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/chat.css">
+    <link rel="stylesheet" href="/css/chat_button.css">
+</head>
+
+<body>
+    <div class="chat-page">
+        
+        <div class="left">
+            <!-- partea stanga --> 
+            <div class="left-background"></div>
+            <div class="left_background_pattern"></div>
+            <div class="upper">
+                
+                
+                <!-- stanga sus -->
+                <div class="search-container">
+                    <input class="search" type="text" placeholder="Search by username">
+                    <i class="fa fa-search"></i>
+                    <i class="fas fa-times"></i>
+                    <i class="fas fa-check"></i>
+                </div>
+
+                <div class="myusername-container">
+                                                                
+                </div>
+
+                <input type="submit" class="logout" onclick="" value="logout" />
+                
+            </div>
+            <div class="bottom">
+                <!-- stanga jos -->
+                <div class="upper-frecvente">
+                    <div class="frec_chat">friends</div>
+                    <div class="frec_groups">groups</div>
+                    <div class="cgbtn">
+                        <div class="toggle-body">
+                            <div class="toggle-btn"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="frecvente">          <!-- aici o sa se bage cu persoanele si grupurile frecventate -->
+                    <ul class="chat-list">
+                        
+                    </ul>
+
+                    <ul class="group-list">
+                        <!-- <li class="lgrup">Grupul1<div class="status"><div class="fas fa-envelope"></div></div></li>
+                        <li class="lgrup">Grupul2<div class="status"><div class="fas fa-envelope"></div></div></li>
+                        <li class="lgrup">Grupul1<div class="status"><div class="fas fa-envelope"></div></div></li>
+                        <li class="lgrup">Grupul2<div class="status"><div class="fas fa-envelope"></div></div></li>
+                        <li class="lgrup">Grupul1<div class="status"><div class="fas fa-envelope"></div></div></li>
+                        <li class="lgrup">Grupul2<div class="status"><div class="fas fa-envelope"></div></div></li> -->
+                        
+                    </ul>
+                                           
+
+                </div>
+
+                <div class="creategroup-window">
+                    <form  class="creategroup-form" >
+                        <div class="attention"></div>
+                        <input type="text" placeholder="Group name" class="creategroup-name" required />
+                        <input type="text" placeholder="user1 user2 user3" class="creategroup-users" required />
+                        <input type="submit_norefresh" onclick="add_group_to_list()"class="submit-group" value="create group" readonly/>
+                    </form>
+                </div>
+
+                <input type="submit_norefresh" class="create-group" value="create a group" readonly/>
+            </div>
+
+
+        </div>
+
+        <div class="begin">
+            <div class="background_pattern"></div>
+            <div class="begin_text">
+                <h1 class="speakfreely">Hi there</h1>
+                <p>Here you can speak freely, everything it's encrypted properly by using salted hashing cryptography method which is the best way to protect your data.</p>
+            </div>
+        </div>
+        <div class="right">
+            <i class="fas fa-arrow-left"></i>
+            
+            <div class="people_menu"><i class="fas fa-chevron-down"></i></div>
+            <ul class="group_users">
+                
+                
+            </ul>
+            
+            <div class="people">
+                    
+                    
+                <!-- aici o sa fie appenduiti divurile cu oamenii din chat -->
+
+            </div>
+            <div class="chat-container">
+                
+                <div class="background_pattern"></div>
+                <ul class="chat">
+                    
+                </ul>
+                                    
+                <!-- chat( o sa fie appenduite divurile cu mesajele(float left si right)) -->
+
+            </div>
+
+            <div class="chat-bottom">
+                <!-- chat jos -->
+                <div class="sendmsg-container">
+                    <input class="sendmsg_input" type="text" placeholder="Send a message">
+                    <i class="fas fa-paper-plane"></i>
+                    <i class="fas fa-smile-beam"></i>
+                    
+                    
+                </div>
+
+                <div class="smileys"><div class="emoji">😀</div><div class="emoji">😃</div><div class="emoji">😄</div><div class="emoji">😁</div><div class="emoji">😆</div><div class="emoji">😅</div><div class="emoji">🤣</div><div class="emoji">😂</div><div class="emoji">🙂</div><div class="emoji">🙃</div><div class="emoji">😉</div><div class="emoji">😊</div><div class="emoji">😇</div><div class="emoji">🥰</div><div class="emoji">😍</div><div class="emoji">🤩</div><div class="emoji">😘</div><div class="emoji">😗</div><div class="emoji">😚</div><div class="emoji">😙</div><div class="emoji">😋</div><div class="emoji">😛</div><div class="emoji">😜</div><div class="emoji">🤪</div><div class="emoji">😝</div><div class="emoji">🤑</div><div class="emoji">🤗</div><div class="emoji">🤭</div><div class="emoji">🤫</div><div class="emoji">🤔</div><div class="emoji">🤐</div><div class="emoji">🤨</div><div class="emoji">😐</div><div class="emoji">😑</div><div class="emoji">😶</div><div class="emoji">😏</div><div class="emoji">😒</div><div class="emoji">🙄</div><div class="emoji">😬</div><div class="emoji">🤥</div><div class="emoji">😌</div><div class="emoji">😔</div><div class="emoji">😪</div><div class="emoji">🤤</div><div class="emoji">😴</div><div class="emoji">😷</div><div class="emoji">🤒</div><div class="emoji">🤕</div><div class="emoji">🤢</div><div class="emoji">🤮</div><div class="emoji">🤧</div><div class="emoji">🥵</div><div class="emoji">🥶</div><div class="emoji">🥴</div><div class="emoji">😵</div><div class="emoji">🤯</div><div class="emoji">🤠</div><div class="emoji">🥳</div><div class="emoji">😎</div><div class="emoji">🤓</div><div class="emoji">🧐</div><div class="emoji">😕</div><div class="emoji">😟</div><div class="emoji">🙁</div><div class="emoji">☹️</div><div class="emoji">😮</div><div class="emoji">😯</div><div class="emoji">😲</div><div class="emoji">😳</div><div class="emoji">🥺</div><div class="emoji">😦</div><div class="emoji">😧</div><div class="emoji">😨</div><div class="emoji">😰</div><div class="emoji">😥</div><div class="emoji">😢</div><div class="emoji">😭</div><div class="emoji">😱</div><div class="emoji">😖</div><div class="emoji">😣</div><div class="emoji">😞</div><div class="emoji">😓</div><div class="emoji">😩</div><div class="emoji">😫</div><div class="emoji">🥱</div><div class="emoji">😤</div><div class="emoji">😡</div><div class="emoji">😠</div><div class="emoji">🤬</div><div class="emoji">😈</div><div class="emoji">👿</div><div class="emoji">💀</div><div class="emoji">☠️</div><div class="emoji">💩</div><div class="emoji">😺</div><div class="emoji">😸</div><div class="emoji">😹</div><div class="emoji">😻</div><div class="emoji">😼</div><div class="emoji">😽</div><div class="emoji">🙀</div><div class="emoji">😿</div><div class="emoji">😾</div><div class="emoji">🙈</div><div class="emoji">🙉</div><div class="emoji">🙊</div><div class="emoji">💘</div><div class="emoji">💝</div><div class="emoji">💖</div><div class="emoji">💗</div><div class="emoji">💓</div><div class="emoji">💞</div><div class="emoji">💕</div><div class="emoji">💟</div><div class="emoji">❣️</div><div class="emoji">💔</div><div class="emoji">❤️</div><div class="emoji">🧡</div><div class="emoji">💛</div><div class="emoji">💚</div><div class="emoji">💙</div><div class="emoji">💜</div><div class="emoji">🤎</div><div class="emoji">🖤</div><div class="emoji">🤍</div></div>
+            </div>
+
+
+        </div>
+        
+    </div>
+    
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/socket.io"></script>
+    <script src="/js/chat.js"></script>
+    <script src="/js/mobile.js"></script>
+    
+</body>
+
+</html>
